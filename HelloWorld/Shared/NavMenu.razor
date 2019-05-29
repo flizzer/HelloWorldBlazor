@@ -1,4 +1,6 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@inherits HelloWorldBlazor.NavMenuBase
+
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">HelloWorld Y'all!</a>
     <button class="navbar-toggler" onclick="@ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -25,7 +27,7 @@
     </ul>
 </div>
 
-@functions {
+<!-- @functions {
     bool collapseNavMenu = true;
 
     string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
@@ -34,4 +36,4 @@
     {
         collapseNavMenu = !collapseNavMenu;
     }
-}
+} -->
