@@ -14,7 +14,11 @@ namespace HelloWorldBlazor
         protected override async Task OnInitAsync()
         {
             var httpClient = new HttpClient();
-            forecasts = await httpClient.GetJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+
+            //TODO: have to figure out a way to resolve URls in the code-behind.  Maybe server-side blazor handles this better???
+            //This blog post might help:
+            //https://benfoster.io/blog/injecting-urlhelper-in-aspnet-core-mvc
+            forecasts = await httpClient.GetJsonAsync<WeatherForecast[]>("http://localhost:5000/sample-data/weather.json");
         }
 
         public class WeatherForecast
