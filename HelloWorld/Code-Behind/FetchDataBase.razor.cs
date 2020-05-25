@@ -11,7 +11,7 @@ namespace HelloWorldBlazor
     {
         public WeatherForecast[] forecasts;
 
-        protected override async Task OnInitAsync()
+        protected override async Task OnInitializedAsync()
         {
             var httpClient = new HttpClient();
 

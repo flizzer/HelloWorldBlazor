@@ -1,6 +1,7 @@
 ﻿@page "/fetchdata"
 @inherits HelloWorldBlazor.FetchDataBase;
-<!-- @inject HttpClient Http -->
+@inject HttpClient Http;
+@* <!-- @inject HttpClient Http --> *@
 
 <h1>Weather forecast</h1>
 
@@ -35,10 +36,10 @@ else
     </table>
 }
 
-<!-- @functions {
+@functions {
     WeatherForecast[] forecasts;
 
-    protected override async Task OnInitAsync()
+    protected override async Task OnInitializedAsync()
     {
         forecasts = await Http.GetJsonAsync<WeatherForecast[]>("sample-data/weather.json");
     }
@@ -53,4 +54,4 @@ else
 
         public string Summary { get; set; }
     }
-} -->
+}
